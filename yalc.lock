@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "@nft-sub/sdk": {
+      "signature": "1899e3c8075b34d61a6bfa018dcd47af",
+      "file": true,
+      "replaced": "file:../subscription-nft-sdk"
+    }
+  }
+}

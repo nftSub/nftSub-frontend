@@ -23,7 +23,7 @@ export default function Header() {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Image
-              src="/nftSub.svg"
+              src="/images/nftSub.png"
               alt="nftSub Logo"
               width={32}
               height={32}
@@ -69,7 +69,7 @@ export default function Header() {
             <nav className="flex md:hidden">
               <Link href="/" className="flex items-center space-x-2">
                 <Image
-                  src="/nftSub.svg"
+                  src="/images/nftSub.png"
                   alt="nftSub Logo"
                   width={32}
                   height={32}

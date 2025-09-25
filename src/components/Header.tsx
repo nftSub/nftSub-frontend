@@ -24,13 +24,13 @@ export default function Header() {
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Image
               src="/subnFT.svg"
-              alt="SubNFT Logo"
+              alt="nftSub Logo"
               width={32}
               height={32}
               className="h-8 w-auto"
             />
             <span className="hidden font-mono text-xl font-bold text-foreground sm:inline-block">
-              SubNFT
+              nftSub
             </span>
           </Link>
           <nav className="flex items-center gap-6 text-sm">
@@ -70,13 +70,13 @@ export default function Header() {
               <Link href="/" className="flex items-center space-x-2">
                 <Image
                   src="/subnFT.svg"
-                  alt="SubNFT Logo"
+                  alt="nftSub Logo"
                   width={32}
                   height={32}
                   className="h-8 w-auto"
                 />
                 <span className="font-mono text-lg font-bold text-foreground">
-                  SubNFT
+                  nftSub
                 </span>
               </Link>
             </nav>

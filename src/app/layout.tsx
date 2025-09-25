@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SubNFT - Web3 Subscription Platform",
+  title: "nftSub - Web3 Subscription Platform",
   description: "Decentralized subscription management with NFTs. Build recurring revenue streams on blockchain.",
   icons: {
     icon: '/subnFT.svg',
@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     apple: '/subnFT.svg',
   },
   openGraph: {
-    title: "SubNFT - Web3 Subscription Platform",
+    title: "nftSub - Web3 Subscription Platform",
     description: "Decentralized subscription management with NFTs. Build recurring revenue streams on blockchain.",
     images: ['/subnFT.svg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "SubNFT - Web3 Subscription Platform",
+    title: "nftSub - Web3 Subscription Platform",
     description: "Decentralized subscription management with NFTs",
     images: ['/subnFT.svg'],
   },

@@ -1,14 +1,14 @@
 <div align="center">
-  <img src="./public/subnFT.svg" alt="SubNFT Logo" width="200" />
+  <img src="./public/subnFT.svg" alt="nftSub Logo" width="200" />
   
-  # SubNFT Documentation
+  # nftSub Documentation
   
-  Official documentation and interactive demos for the SubNFT SDK - Web3 Subscription Platform
+  Official documentation and interactive demos for the nftSub SDK - Web3 Subscription Platform
 </div>
 
 ## Overview
 
-This is the official documentation website for SubNFT SDK. Built with Next.js 14, it provides comprehensive guides, API references, and interactive demonstrations for developers integrating Web3 subscription functionality into their applications.
+This is the official documentation website for nftSub SDK. Built with Next.js 14, it provides comprehensive guides, API references, and interactive demonstrations for developers integrating Web3 subscription functionality into their applications.
 
 The frontend integrates with:
 - [nftSub Smart Contracts](../nftSub-contracts/) - Core subscription logic and payment processing
@@ -17,7 +17,7 @@ The frontend integrates with:
 ## What This Site Includes
 
 ### 📚 Documentation
-- **Getting Started** - Quick setup guide for SubNFT SDK
+- **Getting Started** - Quick setup guide for nftSub SDK
 - **API Reference** - Complete SDK method documentation
 - **React Hooks** - Hook reference for React applications
 - **Components** - Pre-built UI component documentation
@@ -209,15 +209,15 @@ npx serve out
 
 ## Related Repositories
 
-- [SubNFT SDK](https://github.com/subnft/sdk) - Core TypeScript SDK
-- [SubNFT Contracts](https://github.com/subnft/contracts) - Smart contract suite
-- [SubNFT Examples](https://github.com/subnft/examples) - Integration examples
+- [nftSub SDK](https://github.com/nftSub/nftSub-sdk) - Core TypeScript SDK
+- [nftSub Contracts](https://github.com/nftSub/nftSub-contracts) - Smart contract suite
+- [nftSub Examples](https://github.com/nftSub/examples) - Integration examples
 
 ## Support
 
 - **Documentation Issues**: Open an issue in this repository
-- **SDK Issues**: [SubNFT SDK Repository](https://github.com/subnft/sdk/issues)
-- **Contract Issues**: [SubNFT Contracts Repository](https://github.com/subnft/contracts/issues)
+- **SDK Issues**: [nftSub SDK Repository](https://github.com/nftSub/nftSub-sdk/issues)
+- **Contract Issues**: [nftSub Contracts Repository](https://github.com/nftSub/nftSub-contracts/issues)
 
 ## License
 
@@ -226,5 +226,5 @@ MIT
 ---
 
 <div align="center">
-  Built with ❤️ by the SubNFT team
+  Built by the nftSub team
 </div>

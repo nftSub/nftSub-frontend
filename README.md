@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./public/subnFT.svg" alt="nftSub Logo" width="200" />
+  <img src="./public/nftSub.svg" alt="nftSub Logo" width="200" />
   
   # nftSub Documentation
   

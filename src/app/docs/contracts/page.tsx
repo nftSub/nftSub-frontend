@@ -225,7 +225,7 @@ export default function ContractsPage() {
                           <Copy className="w-4 h-4 text-muted-foreground" />
                         )}
                       </button>
-                      {'chains' in contract ? (
+                      {'chains' in contract && contract.chains ? (
                         // Multi-chain contracts - show dropdown or multiple links
                         <div className="flex items-center gap-1">
                           {contract.chains.map((chain) => (

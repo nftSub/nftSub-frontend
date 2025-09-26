@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { Upload, X, AlertCircle, Check } from 'lucide-react';
 import { 
   fileToBase64, 
@@ -11,9 +12,16 @@ import {
   MAX_FILE_SIZE 
 } from '@/utils/imageUtils';
 
+interface MerchantData {
+  merchantId: string;
+  name: string;
+  description: string;
+  logo: string | null;
+}
+
 interface MerchantRegistrationFormProps {
   merchantId: string;
-  onSuccess?: (data: any) => void;
+  onSuccess?: (data: MerchantData) => void;
   onError?: (error: string) => void;
 }
 
@@ -55,14 +63,14 @@ export default function MerchantRegistrationForm({
         try {
           base64 = await compressImage(base64, 400, 400, 0.7);
           setFileSize(formatFileSize(base64.length * 0.75)); // Approximate size
-        } catch (err) {
+        } catch {
           console.log('Compression failed, using original');
         }
       }
       
       setLogoPreview(base64);
-    } catch (err: any) {
-      setError(err.message || 'Failed to process image');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to process image');
     }
   };
 
@@ -110,9 +118,10 @@ export default function MerchantRegistrationForm({
         setFileSize(null);
         setSuccess(false);
       }, 3000);
-    } catch (err: any) {
-      setError(err.message || 'Failed to register merchant');
-      onError?.(err.message);
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : 'Failed to register merchant';
+      setError(errorMessage);
+      onError?.(errorMessage);
     } finally {
       setIsLoading(false);
     }
@@ -189,11 +198,14 @@ export default function MerchantRegistrationForm({
           ) : (
             <div className="border rounded-lg p-4">
               <div className="flex items-start space-x-4">
-                <img
-                  src={logoPreview}
-                  alt="Logo preview"
-                  className="w-20 h-20 object-cover rounded"
-                />
+                <div className="relative w-20 h-20">
+                  <Image
+                    src={logoPreview}
+                    alt="Logo preview"
+                    fill
+                    className="object-cover rounded"
+                  />
+                </div>
                 <div className="flex-1">
                   <p className="text-sm font-medium">Logo uploaded</p>
                   {fileSize && (

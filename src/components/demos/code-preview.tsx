@@ -88,25 +88,31 @@ function MySubscriptionPage() {
 
   merchantSetup: `import { SubscriptionSDK } from '@nft-sub/sdk';
 
-// Create a new merchant
-async function createMerchant() {
+// Register as a merchant
+async function registerMerchant() {
   const sdk = new SubscriptionSDK({
     chain: 'sepolia',
     privateKey: process.env.PRIVATE_KEY
   });
 
-  const merchantData = {
-    name: 'My SaaS Platform',
-    description: 'Premium features and analytics',
-    priceInWei: '10000000000000000', // 0.01 ETH
-    duration: 30 * 24 * 60 * 60, // 30 days in seconds
-    acceptedTokens: ['ETH', 'USDC']
-  };
+  // Register with minimal on-chain data
+  const { hash, merchantId } = await sdk.merchants.registerMerchant({
+    payoutAddress: '0x...', // Your wallet for receiving payments
+    subscriptionPeriod: 30 * 24 * 60 * 60, // 30 days in seconds
+    gracePeriod: 7 * 24 * 60 * 60 // 7 days grace period
+  });
 
-  const txHash = await sdk.createMerchant(merchantData);
-  await sdk.waitForTransaction(txHash);
+  await sdk.waitForTransaction(hash);
+  console.log('Merchant registered with ID:', merchantId);
+
+  // Set prices for accepted payment tokens
+  await sdk.merchants.setMerchantPrice({
+    merchantId,
+    paymentToken: '0x0000000000000000000000000000000000000000', // ETH
+    price: '0.01' // 0.01 ETH
+  });
   
-  console.log('Merchant created successfully!');
+  console.log('Merchant setup complete!');
 }`,
 
   hooks: `import { 

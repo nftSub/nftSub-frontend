@@ -78,14 +78,40 @@ const sdk = new SubscriptionSDK({
         </div>
       </motion.section>
 
-      {/* Basic Usage */}
+      {/* Merchant Registration (v2) */}
       <motion.section
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
         className="rounded-2xl border border-border bg-card/50 p-6 backdrop-blur-sm"
       >
-        <H3 className="mb-4">Basic Usage</H3>
+        <H3 className="mb-4">Merchant Registration v2</H3>
+        <div className="rounded-lg border border-border bg-card overflow-hidden">
+          <div className="p-4">
+            <pre className="text-sm font-mono text-foreground overflow-x-auto">
+              <code>{`const { hash, merchantId, metadataStored } = await sdk.merchants.registerMerchantWithMetadata({
+  payoutAddress: '0x...',
+  subscriptionPeriod: 2592000,
+  gracePeriod: 604800,
+  name: 'My Business',
+  description: 'Premium subscription service',
+  logo: 'data:image/png;base64,...'
+});
+
+const metadata = await sdk.merchants.getMerchantMetadata(merchantId);`}</code>
+            </pre>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Basic Usage */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+        className="rounded-2xl border border-border bg-card/50 p-6 backdrop-blur-sm"
+      >
+        <H3 className="mb-4">Subscription Management</H3>
         <div className="rounded-lg border border-border bg-card overflow-hidden">
           <div className="p-4">
             <pre className="text-sm font-mono text-foreground overflow-x-auto">
@@ -96,7 +122,10 @@ const txHash = await sdk.subscribe(merchantId, 'ETH');
 const hasAccess = await sdk.checkAccess(merchantId, address);
 
 // Get subscription status
-const status = await sdk.subscriptions.getSubscriptionStatus(address, merchantId);`}</code>
+const status = await sdk.subscriptions.getSubscriptionStatus(address, merchantId);
+
+// Get NFT metadata (includes merchant branding)
+const nftMetadata = await sdk.nfts.getFullMetadata(address, merchantId);`}</code>
             </pre>
           </div>
         </div>

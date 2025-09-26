@@ -297,9 +297,9 @@ export default function HowItWorksPage() {
           <pre className="p-4 overflow-x-auto text-sm">
             <code className="font-mono">{`// 1. Merchant sets up subscription plan
 const tx = await subscriptionManager.registerMerchant(
-  merchantWallet,     // Wallet to receive payments
-  30,                 // Duration in days
-  3,                  // Grace period in days
+  merchantWallet,        // Wallet to receive payments
+  30 * 24 * 60 * 60,    // Duration: 30 days in seconds (2592000)
+  3 * 24 * 60 * 60,     // Grace period: 3 days in seconds (259200)
   { gasLimit: 200000 }
 );
 

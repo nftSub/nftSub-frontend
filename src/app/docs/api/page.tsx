@@ -21,9 +21,22 @@ const apiSections = [
     ]
   },
   {
+    title: 'Merchant Methods (v2)',
+    methods: [
+      { name: 'registerMerchantWithMetadata', params: '(params: RegisterMerchantParams)', returns: 'Promise<{hash, merchantId, metadataStored}>' },
+      { name: 'getMerchantMetadata', params: '(merchantId: bigint)', returns: 'Promise<MerchantMetadata | null>' },
+      { name: 'updateMerchantMetadata', params: '(params: UpdateMetadataParams)', returns: 'Promise<boolean>' },
+      { name: 'getMerchantComplete', params: '(merchantId: bigint)', returns: 'Promise<{onChain, metadata}>' },
+      { name: 'registerMerchant', params: '(params: OnChainParams)', returns: 'Promise<{hash, merchantId}>' },
+      { name: 'setMerchantPrice', params: '(params: PriceParams)', returns: 'Promise<Hash>' },
+      { name: 'getMerchantPlan', params: '(merchantId: bigint)', returns: 'Promise<MerchantPlan>' },
+      { name: 'withdrawMerchantBalance', params: '(params: WithdrawParams)', returns: 'Promise<Hash>' }
+    ]
+  },
+  {
     title: 'Services',
     methods: [
-      { name: 'sdk.merchants', params: 'MerchantService', returns: 'registerMerchant, setMerchantPrice, getMerchantPlan, withdrawMerchantBalance' },
+      { name: 'sdk.merchants', params: 'MerchantService', returns: 'Full merchant management with v2 metadata support' },
       { name: 'sdk.subscriptions', params: 'SubscriptionService', returns: 'subscribe, getSubscriptionStatus, isSubscriptionActive, getSubscriptionPrice' },
       { name: 'sdk.tokens', params: 'TokenService', returns: 'getTokenInfo, getBalance, approve, approveIfNeeded' },
       { name: 'sdk.nfts', params: 'NFTService', returns: 'getBalance, safeTransferFrom, getFullMetadata, getTokenURI' },
@@ -54,6 +67,29 @@ const types = [
       privateKey: 'string',
       rpc: 'string',
       readOnly: 'boolean'
+    }
+  },
+  {
+    name: 'RegisterMerchantParams (v2)',
+    properties: {
+      payoutAddress: 'Address',
+      subscriptionPeriod: 'number',
+      gracePeriod: 'number',
+      name: 'string',
+      description: 'string (optional)',
+      logo: 'string (optional)',
+      metadataApiUrl: 'string (optional)'
+    }
+  },
+  {
+    name: 'MerchantMetadata',
+    properties: {
+      merchantId: 'string',
+      name: 'string',
+      description: 'string',
+      logo: 'string | null',
+      createdAt: 'string',
+      updatedAt: 'string'
     }
   },
   {

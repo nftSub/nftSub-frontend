@@ -58,18 +58,18 @@ const sections = [
 
 const features = [
   {
+    title: 'Merchant Metadata v2',
+    description: 'Off-chain merchant profiles with dynamic NFT metadata generation.',
+    icon: Shield
+  },
+  {
     title: 'ERC-1155 NFT Subscriptions',
     description: 'Each subscription is a tradeable NFT with built-in access control and transfer capabilities.',
-    icon: Shield
+    icon: GitBranch
   },
   {
     title: 'Reactive Network Integration',
     description: 'Automated renewals and cross-chain subscription management powered by Reactive Network.',
-    icon: GitBranch
-  },
-  {
-    title: 'Multiple Payment Options',
-    description: 'Support for ETH, USDC, and other ERC-20 tokens with configurable pricing.',
     icon: BookOpen
   }
 ];

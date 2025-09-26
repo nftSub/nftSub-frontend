@@ -18,21 +18,29 @@ The frontend integrates with:
 
 ### 📚 Documentation
 - **Getting Started** - Quick setup guide for nftSub SDK
-- **API Reference** - Complete SDK method documentation
+- **API Reference** - Complete SDK method documentation  
 - **React Hooks** - Hook reference for React applications
 - **Components** - Pre-built UI component documentation
+- **[Merchant Metadata](./docs/MERCHANT_METADATA.md)** - Complete guide for merchant registration and NFT metadata
 
-### 🎮 Interactive Demos
-- Live subscription flow demonstrations
-- Wallet connection examples
-- Payment processing scenarios
-- NFT subscription management
+### 🎮 Interactive Features
+- **Merchant Setup** - Complete metadata registration flow at `/merchant/setup/{id}`
+- **NFT Metadata API** - Dynamic metadata generation at `/api/metadata/{chainId}/{tokenId}`
+- **Merchant API** - RESTful API for merchant data management
 
 ### 🛠 Developer Resources
 - Code examples with syntax highlighting
 - Copy-paste ready snippets
 - Integration patterns
 - Best practices
+- SDK v2 with metadata support
+
+## New in v2.0
+
+- Off-chain merchant metadata storage (Vercel KV)
+- Dynamic NFT metadata with merchant branding
+- `registerMerchantWithMetadata()` method
+- Base64 image support (max 500KB)
 
 ## Quick Start
 

@@ -158,3 +158,4 @@ class MerchantStore {
 // Export singleton instance
 const merchantStore = new MerchantStore();
 export default merchantStore;
+

@@ -6,8 +6,46 @@ import { H1, H2, H3, P, Lead, GradientText } from '@/components/Typography';
 import { useState } from 'react';
 
 const contracts = [
+  // Mainnet Contracts
   {
     name: 'SubscriptionManager',
+    description: 'Main contract for managing subscriptions and payments (deployed on all mainnet chains)',
+    network: 'Multi-Chain',
+    address: '0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c',
+    chains: [
+      { name: 'Base', explorerUrl: 'https://basescan.org/address/0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c' },
+      { name: 'BSC', explorerUrl: 'https://bscscan.com/address/0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c' },
+      { name: 'Avalanche', explorerUrl: 'https://snowtrace.io/address/0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c' },
+      { name: 'Sonic', explorerUrl: 'https://sonicscan.org/address/0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c' }
+    ],
+    functions: [
+      'subscribe(merchantId, token)',
+      'registerMerchant(wallet, duration, gracePeriod)',
+      'setPaymentToken(token, price)',
+      'checkSubscription(user, merchantId)'
+    ]
+  },
+  {
+    name: 'SubscriptionNFT',
+    description: 'ERC-1155 NFT representing active subscriptions (deployed on all mainnet chains)',
+    network: 'Multi-Chain',
+    address: '0x6D4b8BC4613dDCB98450a97b297294BacBd2DDD8',
+    chains: [
+      { name: 'Base', explorerUrl: 'https://basescan.org/address/0x6D4b8BC4613dDCB98450a97b297294BacBd2DDD8' },
+      { name: 'BSC', explorerUrl: 'https://bscscan.com/address/0x6D4b8BC4613dDCB98450a97b297294BacBd2DDD8' },
+      { name: 'Avalanche', explorerUrl: 'https://snowtrace.io/address/0x6D4b8BC4613dDCB98450a97b297294BacBd2DDD8' },
+      { name: 'Sonic', explorerUrl: 'https://sonicscan.org/address/0x6D4b8BC4613dDCB98450a97b297294BacBd2DDD8' }
+    ],
+    functions: [
+      'mintSubscription(user, merchantId)',
+      'updateExpiry(user, merchantId, newExpiry)',
+      'isSubscriptionActive(user, merchantId)',
+      'getSubscriptionExpiry(user, merchantId)'
+    ]
+  },
+  // Testnet Contracts
+  {
+    name: 'SubscriptionManager (Testnet)',
     description: 'Main contract for managing subscriptions and payments',
     network: 'Sepolia',
     address: '0x82b069578ae3dA9ea740D24934334208b83E530E',
@@ -20,7 +58,7 @@ const contracts = [
     ]
   },
   {
-    name: 'SubscriptionNFT',
+    name: 'SubscriptionNFT (Testnet)',
     description: 'ERC-1155 NFT representing active subscriptions',
     network: 'Sepolia',
     address: '0x404cb817FA393D3689D1405DB0B76a20eDE72d43',
@@ -187,14 +225,33 @@ export default function ContractsPage() {
                           <Copy className="w-4 h-4 text-muted-foreground" />
                         )}
                       </button>
-                      <a
-                        href={contract.explorerUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 hover:bg-background rounded-lg transition-colors"
-                      >
-                        <ExternalLink className="w-4 h-4 text-muted-foreground" />
-                      </a>
+                      {'chains' in contract ? (
+                        // Multi-chain contracts - show dropdown or multiple links
+                        <div className="flex items-center gap-1">
+                          {contract.chains.map((chain) => (
+                            <a
+                              key={chain.name}
+                              href={chain.explorerUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="px-2 py-1 text-xs hover:bg-background rounded transition-colors"
+                              title={`View on ${chain.name}`}
+                            >
+                              {chain.name}
+                            </a>
+                          ))}
+                        </div>
+                      ) : (
+                        // Single chain contract
+                        <a
+                          href={contract.explorerUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 hover:bg-background rounded-lg transition-colors"
+                        >
+                          <ExternalLink className="w-4 h-4 text-muted-foreground" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

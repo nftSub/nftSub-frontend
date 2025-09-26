@@ -78,14 +78,18 @@ export async function GET(
 
 function getChainName(chainId: string): string {
   const chains: Record<string, string> = {
-    '1': 'Ethereum',
-    '11155111': 'Sepolia',
-    '137': 'Polygon',
+    // Mainnet chains
     '8453': 'Base',
-    '42161': 'Arbitrum',
-    '10': 'Optimism',
     '56': 'BSC',
-    '43114': 'Avalanche'
+    '43114': 'Avalanche',
+    '146': 'Sonic',
+    // Testnet
+    '11155111': 'Sepolia',
+    // Other common chains (for reference)
+    '1': 'Ethereum',
+    '137': 'Polygon',
+    '42161': 'Arbitrum',
+    '10': 'Optimism'
   };
   
   return chains[chainId] || `Chain ${chainId}`;

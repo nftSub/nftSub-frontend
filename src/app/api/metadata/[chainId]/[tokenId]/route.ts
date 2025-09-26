@@ -1,6 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
 import merchantStore from '@/lib/merchant-store';
 
+// CORS headers for cross-origin requests
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
+export async function OPTIONS(request: NextRequest) {
+  return new Response(null, { status: 200, headers: corsHeaders });
+}
+
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ chainId: string; tokenId: string }> }
@@ -18,7 +29,7 @@ export async function GET(
           error: 'Merchant not registered',
           message: `Merchant ${tokenId} has not completed metadata registration. Please visit /merchant/setup/${tokenId} to add your business information.`
         },
-        { status: 404 }
+        { status: 404, headers: corsHeaders }
       );
     }
 
@@ -50,7 +61,7 @@ export async function GET(
           value: 'Premium Subscription'
         }
       ]
-    });
+    }, { headers: corsHeaders });
   } catch (error) {
     console.error('Error generating NFT metadata:', error);
     
@@ -60,7 +71,7 @@ export async function GET(
         error: 'Internal server error',
         message: 'Failed to generate NFT metadata'
       },
-      { status: 500 }
+      { status: 500, headers: corsHeaders }
     );
   }
 }

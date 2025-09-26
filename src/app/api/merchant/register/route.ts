@@ -4,6 +4,13 @@ import merchantStore from '@/lib/merchant-store';
 // Max file size: 500KB (reasonable for logos)
 const MAX_FILE_SIZE = 500 * 1024; // 500KB in bytes
 
+// CORS headers for cross-origin requests
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -13,7 +20,7 @@ export async function POST(request: NextRequest) {
     if (!merchantId || !name) {
       return NextResponse.json(
         { error: 'merchantId and name are required' },
-        { status: 400 }
+        { status: 400, headers: corsHeaders }
       );
     }
 
@@ -29,7 +36,7 @@ export async function POST(request: NextRequest) {
         if (sizeInBytes > MAX_FILE_SIZE) {
           return NextResponse.json(
             { error: `Logo too large. Max size is ${MAX_FILE_SIZE / 1024}KB` },
-            { status: 400 }
+            { status: 400, headers: corsHeaders }
           );
         }
         processedLogo = logo;
@@ -49,14 +56,18 @@ export async function POST(request: NextRequest) {
       merchantId,
       message: 'Merchant metadata saved successfully',
       merchant
-    });
+    }, { headers: corsHeaders });
   } catch (error) {
     console.error('Error saving merchant metadata:', error);
     return NextResponse.json(
       { error: 'Failed to save merchant metadata' },
-      { status: 500 }
+      { status: 500, headers: corsHeaders }
     );
   }
+}
+
+export async function OPTIONS(request: NextRequest) {
+  return new Response(null, { status: 200, headers: corsHeaders });
 }
 
 export async function GET(request: NextRequest) {
@@ -69,10 +80,10 @@ export async function GET(request: NextRequest) {
       if (!merchant) {
         return NextResponse.json(
           { error: 'Merchant not found' },
-          { status: 404 }
+          { status: 404, headers: corsHeaders }
         );
       }
-      return NextResponse.json(merchant);
+      return NextResponse.json(merchant, { headers: corsHeaders });
     }
     
     // Return all merchants (without logos to reduce size)
@@ -82,12 +93,12 @@ export async function GET(request: NextRequest) {
       logo: m.logo ? 'base64...' : null // Don't send full base64 in list
     }));
     
-    return NextResponse.json(merchantsList);
+    return NextResponse.json(merchantsList, { headers: corsHeaders });
   } catch (error) {
     console.error('Error fetching merchants:', error);
     return NextResponse.json(
       { error: 'Failed to fetch merchants' },
-      { status: 500 }
+      { status: 500, headers: corsHeaders }
     );
   }
 }

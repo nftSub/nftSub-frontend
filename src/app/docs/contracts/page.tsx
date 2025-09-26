@@ -117,7 +117,7 @@ export default function ContractsPage() {
       >
         <H2 className="mb-6">Architecture Overview</H2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {architecture.map((item, index) => (
+          {architecture.map((item) => (
             <div 
               key={item.title}
               className="group rounded-xl border border-border bg-card/50 p-6 hover:border-accent hover:shadow-lg transition-all"

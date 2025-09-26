@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { H1, H2, H3, GradientText } from '@/components/Typography';
+import { H1, H3, GradientText } from '@/components/Typography';
 
 export default function QuickstartPage() {
   return (

@@ -242,7 +242,7 @@ export default function HowItWorksPage() {
               <div>
                 <P className="font-semibold m-0 mb-1">Grace Period Management</P>
                 <P className="text-sm text-muted-foreground m-0">
-                  Configurable grace periods ensure users don't lose access due to temporary payment issues
+                  Configurable grace periods ensure users don&apos;t lose access due to temporary payment issues
                 </P>
               </div>
             </div>

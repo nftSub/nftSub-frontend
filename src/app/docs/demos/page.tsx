@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Play, CreditCard, Settings, CheckCircle, ArrowRight } from 'lucide-react';
+import { CreditCard, Settings, CheckCircle, ArrowRight } from 'lucide-react';
 import { H1, H2, P, Lead, GradientText } from '@/components/Typography';
 import { SubscriptionDemo } from '@/components/demos/subscription-demo';
 import { useState } from 'react';
@@ -102,7 +102,7 @@ export default function DemosPage() {
                 happen on the Sepolia testnet.
               </P>
             </div>
-            <SubscriptionDemo merchantId={1n} />
+            <SubscriptionDemo merchantId={BigInt(1)} />
           </>
         )}
 

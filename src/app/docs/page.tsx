@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { BookOpen, Code, Zap, Settings, BarChart3, Play, ArrowRight, Shield, GitBranch } from 'lucide-react';
+import { BookOpen, Code, Zap, Settings, Play, ArrowRight, Shield, GitBranch } from 'lucide-react';
 import Link from 'next/link';
 import { H1, H2, P, Lead, GradientText } from '@/components/Typography';
 

@@ -149,7 +149,7 @@ export default function FAQPage() {
         </H1>
         <Lead className="max-w-3xl">
           Find answers to common questions about the Subscription NFT platform.
-          Can't find what you're looking for? Reach out to our community on Discord.
+          Can&apos;t find what you&apos;re looking for? Reach out to our community on Discord.
         </Lead>
       </motion.div>
 

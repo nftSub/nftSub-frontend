@@ -6,12 +6,12 @@ const reactiveConfig = getReactiveConfig();
 
 export const CONTRACT_ADDRESSES = {
   sepolia: {
-    subscriptionManager: sepoliaConfig.contracts.subscriptionManager as const,
-    subscriptionNFT: sepoliaConfig.contracts.subscriptionNFT as const,
-    testToken: sepoliaConfig.contracts.testToken as const,
+    subscriptionManager: sepoliaConfig.contracts.subscriptionManager,
+    subscriptionNFT: sepoliaConfig.contracts.subscriptionNFT,
+    testToken: sepoliaConfig.contracts.testToken,
   },
   reactive: {
-    subscriptionReactive: reactiveConfig.contracts.subscriptionReactive as const,
+    subscriptionReactive: reactiveConfig.contracts.subscriptionReactive,
   },
 } as const;
 

@@ -1,13 +1,13 @@
 'use client';
 
 import { ThemeProvider as NextThemesProvider } from 'next-themes';
-import { type ThemeProviderProps } from 'next-themes/dist/types';
+import { type ComponentProps } from 'react';
 
 /**
  * Theme provider component that wraps the application with dark/light mode support
  * Uses next-themes for seamless theme switching with system preference detection
  */
-export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+export function ThemeProvider({ children, ...props }: ComponentProps<typeof NextThemesProvider>) {
   return (
     <NextThemesProvider
       attribute="class"

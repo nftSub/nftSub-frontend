@@ -166,16 +166,6 @@ export default function ComingSoonPage() {
     }
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'completed':
-        return 'text-brand-green';
-      case 'in-progress':
-        return 'text-brand-blue';
-      default:
-        return 'text-muted-foreground';
-    }
-  };
 
   return (
     <div className="space-y-12">

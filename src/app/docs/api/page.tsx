@@ -111,7 +111,7 @@ export default function ApiPage() {
         <H3 className="mb-3">Initialization</H3>
         <div className="rounded-lg border border-border bg-card p-3">
           <code className="text-sm font-mono text-foreground">
-            new SubscriptionSDK({'{'} chain: 'sepolia', walletClient {'}'})
+            new SubscriptionSDK({'{'} chain: &apos;sepolia&apos;, walletClient {'}'})
           </code>
         </div>
       </motion.section>

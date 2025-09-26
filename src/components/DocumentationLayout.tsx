@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { Menu, X, BookOpen, Code, Play, Settings, BarChart3, Github, ExternalLink, FileCode, Zap, Braces, Layers, HelpCircle, Rocket } from 'lucide-react';
+import { Menu, X, BookOpen, Code, Play, Settings, Github, ExternalLink, FileCode, Zap, Braces, Layers, HelpCircle, Rocket } from 'lucide-react';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { appConfig } from '@/config/env';
 

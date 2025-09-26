@@ -165,7 +165,7 @@ export function CodePreview({
   title, 
   description, 
   code, 
-  language: _language = 'typescript',
+  language = 'typescript',
   showPreview = false,
   previewComponent,
   className = '' 
@@ -243,7 +243,7 @@ export function CodePreview({
       {activeTab === 'code' ? (
         <div className="relative">
           <pre className="p-4 overflow-x-auto bg-muted/20 text-sm">
-            <code className="text-foreground font-mono leading-relaxed">
+            <code className={`text-foreground font-mono leading-relaxed language-${language}`}>
               {code}
             </code>
           </pre>

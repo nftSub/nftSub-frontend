@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { CreditCard, Check, AlertCircle, Loader2, Clock, TrendingUp } from 'lucide-react';
+import { CreditCard, Check, AlertCircle, Loader2, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 // Mock SubscriptionWidget Preview

@@ -61,7 +61,8 @@ export function SubscriptionDemo({ merchantId = BigInt(1), className = '' }: Sub
     };
 
     initializeSDK();
-  }, [isConnected, address, chainId,walletClient]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isConnected, address, chainId, walletClient]);
 
   const checkSubscriptionStatus = async (sdkInstance: SubscriptionSDK) => {
     if (!address) return;

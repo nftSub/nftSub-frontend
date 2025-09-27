@@ -6,6 +6,21 @@
   Official documentation and interactive demos for the nftSub SDK - Web3 Subscription Platform
 </div>
 
+## 🚀 We're LIVE on Mainnet!
+
+**nftSub is now deployed across Base, BSC, Avalanche, and Sonic mainnets!** Start building production-ready subscription services today.
+
+### Mainnet Deployments
+
+| Chain | SubscriptionManager | SubscriptionNFT | Explorer |
+|-------|---------------------|-----------------|----------|
+| **Base** | [`0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c`](https://basescan.org/address/0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c) | [`0x6D4b8BC4613dDCB98450a97b297294BacBd2DDD8`](https://basescan.org/address/0x6D4b8BC4613dDCB98450a97b297294BacBd2DDD8) | [BaseScan](https://basescan.org) |
+| **BSC** | [`0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c`](https://bscscan.com/address/0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c) | [`0x6D4b8BC4613dDCB98450a97b297294BacBd2DDD8`](https://bscscan.com/address/0x6D4b8BC4613dDCB98450a97b297294BacBd2DDD8) | [BscScan](https://bscscan.com) |
+| **Avalanche** | [`0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c`](https://snowtrace.io/address/0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c) | [`0x6D4b8BC4613dDCB98450a97b297294BacBd2DDD8`](https://snowtrace.io/address/0x6D4b8BC4613dDCB98450a97b297294BacBd2DDD8) | [SnowTrace](https://snowtrace.io) |
+| **Sonic** | [`0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c`](https://sonicscan.org/address/0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c) | [`0x6D4b8BC4613dDCB98450a97b297294BacBd2DDD8`](https://sonicscan.org/address/0x6D4b8BC4613dDCB98450a97b297294BacBd2DDD8) | [SonicScan](https://sonicscan.org) |
+
+**Reactive Network**: [`0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c`](https://reactscan.net/address/0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c) on [ReactScan](https://reactscan.net)
+
 ## Overview
 
 This is the official documentation website for nftSub SDK. Built with Next.js 14, it provides comprehensive guides, API references, and interactive demonstrations for developers integrating Web3 subscription functionality into their applications.

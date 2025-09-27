@@ -75,7 +75,7 @@ const contracts = [
     description: 'Cross-chain reactive contract for automated processing',
     network: 'Reactive Network',
     address: '0xa55B7A74D05b5D5C48E431e44Fea83a1047A7582',
-    explorerUrl: 'https://reactive.network/explorer/address/0xa55B7A74D05b5D5C48E431e44Fea83a1047A7582',
+    explorerUrl: 'https://lasna.reactscan.net/address/0xa55B7A74D05b5D5C48E431e44Fea83a1047A7582',
     functions: [
       'processPaymentEvent(event)',
       'checkExpiredSubscriptions()',

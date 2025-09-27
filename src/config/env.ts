@@ -144,7 +144,7 @@ const defaultConfig: AppConfig = {
     reactive: {
       chainId: 5318008,
       rpcUrl: process.env.NEXT_PUBLIC_REACTIVE_RPC_URL || 'https://lasna-rpc.rnk.dev/',
-      explorer: 'https://reactive-explorer.rnk.dev',
+      explorer: 'https://lasna.reactscan.net',
       contracts: {
         subscriptionReactive: process.env.NEXT_PUBLIC_REACTIVE_SUBSCRIPTION_CONTRACT || '0xa55B7A74D05b5D5C48E431e44Fea83a1047A7582',
       },

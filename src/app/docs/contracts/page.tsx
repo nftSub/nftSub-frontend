@@ -8,7 +8,7 @@ import { useState } from 'react';
 const contracts = [
   // Mainnet Contracts
   {
-    name: 'SubscriptionManager',
+    name: 'SubscriptionManager (Mainnet)',
     description: 'Main contract for managing subscriptions and payments (deployed on all mainnet chains)',
     network: 'Multi-Chain',
     address: '0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c',
@@ -26,7 +26,7 @@ const contracts = [
     ]
   },
   {
-    name: 'SubscriptionNFT',
+    name: 'SubscriptionNFT (Mainnet)',
     description: 'ERC-1155 NFT representing active subscriptions (deployed on all mainnet chains)',
     network: 'Multi-Chain',
     address: '0x6D4b8BC4613dDCB98450a97b297294BacBd2DDD8',
@@ -41,6 +41,19 @@ const contracts = [
       'updateExpiry(user, merchantId, newExpiry)',
       'isSubscriptionActive(user, merchantId)',
       'getSubscriptionExpiry(user, merchantId)'
+    ]
+  },
+  {
+    name: 'SubscriptionReactive (Mainnet)',
+    description: 'Cross-chain reactive contract for automated processing',
+    network: 'Reactive Network',
+    address: '0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c',
+    explorerUrl: 'https://reactscan.net/address/0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c',
+    functions: [
+      'processPaymentEvent(event)',
+      'checkExpiredSubscriptions()',
+      'sendCallback(targetChain, data)',
+      'updateSubscriptionStatus(user, merchantId)'
     ]
   },
   // Testnet Contracts
@@ -70,21 +83,6 @@ const contracts = [
       'getSubscriptionExpiry(user, merchantId)'
     ]
   },
-  // Mainnet Reactive Contract
-  {
-    name: 'SubscriptionReactive',
-    description: 'Cross-chain reactive contract for automated processing (deployed on Reactive mainnet)',
-    network: 'Reactive Network',
-    address: '0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c',
-    explorerUrl: 'https://reactscan.net/address/0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c',
-    functions: [
-      'processPaymentEvent(event)',
-      'checkExpiredSubscriptions()',
-      'sendCallback(targetChain, data)',
-      'updateSubscriptionStatus(user, merchantId)'
-    ]
-  },
-  // Testnet Reactive Contract
   {
     name: 'SubscriptionReactive (Testnet)',
     description: 'Cross-chain reactive contract for automated processing',

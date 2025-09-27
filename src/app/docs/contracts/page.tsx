@@ -70,8 +70,23 @@ const contracts = [
       'getSubscriptionExpiry(user, merchantId)'
     ]
   },
+  // Mainnet Reactive Contract
   {
     name: 'SubscriptionReactive',
+    description: 'Cross-chain reactive contract for automated processing (deployed on Reactive mainnet)',
+    network: 'Reactive Network',
+    address: '0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c',
+    explorerUrl: 'https://reactscan.net/address/0x99ad42b29a7a99Ee4552cf6dc36dc4d44d8b0A2c',
+    functions: [
+      'processPaymentEvent(event)',
+      'checkExpiredSubscriptions()',
+      'sendCallback(targetChain, data)',
+      'updateSubscriptionStatus(user, merchantId)'
+    ]
+  },
+  // Testnet Reactive Contract
+  {
+    name: 'SubscriptionReactive (Testnet)',
     description: 'Cross-chain reactive contract for automated processing',
     network: 'Reactive Network',
     address: '0xa55B7A74D05b5D5C48E431e44Fea83a1047A7582',

@@ -6,6 +6,9 @@
   Official documentation and interactive demos for the nftSub SDK - Web3 Subscription Platform
 </div>
 
+  <img src ="./public/images/banner-logo.png" alt="nftSub banner image">
+
+
 ## 🚀 We're LIVE on Mainnet!
 
 **nftSub is now deployed across Base, BSC, Avalanche, and Sonic mainnets!** Start building production-ready subscription services today.

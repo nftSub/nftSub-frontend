@@ -9,7 +9,9 @@
   <img src ="./public/images/banner-logo.png" alt="nftSub banner image">
 
 
-## 🚀 We're LIVE on Mainnet!
+##  We're LIVE on Mainnet!
+
+<img src="./public/images/live-on-mainnet.png" alt="Live on Mainnet" />
 
 **nftSub is now deployed across Base, BSC, Avalanche, and Sonic mainnets!** Start building production-ready subscription services today.
 

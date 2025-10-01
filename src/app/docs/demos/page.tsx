@@ -194,7 +194,7 @@ export default function DemosPage() {
           <P className="text-sm m-0">
             <strong>Note:</strong> All demos use testnet tokens. No real funds are required or at risk.
             Smart contracts are deployed on Sepolia at address{' '}
-            <code className="font-mono text-xs bg-card px-2 py-1 rounded">0xYourContractAddress</code>
+            <code className="font-mono text-xs bg-card px-2 py-1 rounded">0x82b069578ae3dA9ea740D24934334208b83E530E</code>
           </P>
         </div>
       </motion.section>

@@ -24,7 +24,7 @@ const navigation = [
 const externalLinks = [
   { 
     name: 'GitHub', 
-    href: 'https://github.com/reactive-network/nft-subscription-sdk', 
+    href: 'https://github.com/nftSub/nftSub-sdk', 
     icon: Github 
   },
   { 
@@ -213,7 +213,7 @@ export default function DocumentationLayout({ children }: { children: React.Reac
                 </a>
                 <span>•</span>
                 <a 
-                  href="https://github.com/reactive-network/nft-subscription-sdk" 
+                  href="https://github.com/nftSub/nftSub-sdk" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-foreground transition-colors flex items-center space-x-1"

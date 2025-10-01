@@ -85,7 +85,7 @@ export default function Header() {
           <div className="flex items-center space-x-2">
             {/* GitHub link */}
             <a
-              href="https://github.com/reactive-network"
+              href="https://github.com/nftSub"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-input bg-transparent hover:bg-accent hover:text-accent-foreground"

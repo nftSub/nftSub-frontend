@@ -336,20 +336,12 @@ export default function ComingSoonPage() {
           
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a
-              href="https://github.com/reactive-network/nft-subscription-sdk/issues/new"
+              href="https://github.com/nftSub/nftSub-sdk/issues/new"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-brand-gradient text-white font-semibold rounded-lg hover:opacity-90 transition-opacity"
             >
               Submit Feature Request
-            </a>
-            <a
-              href="https://discord.gg/subscription-nft"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 border border-border bg-card text-foreground font-semibold rounded-lg hover:bg-accent transition-colors"
-            >
-              Join Discord Community
             </a>
           </div>
         </div>
